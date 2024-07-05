@@ -8,8 +8,10 @@ auth.set_access_token(credentials.access_token, credentials.access_token_secret)
 api = tweepy.API(auth)
 
 
-# Obtener información del un usuario
-user = api.me()
+
+# Obtener información del usuario
+user = api.verify_credentials()
+
 # Get my user
 print("")
 print("Bienvenido " + user.screen_name +"!")
